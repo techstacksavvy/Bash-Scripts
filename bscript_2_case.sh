@@ -20,23 +20,30 @@ else
 	echo "$performance"
 	echo "                                                                 "
 	
-    	# Ask user to terminate processes identifoed as using more that X amount of resources
+    # Ask user to terminate processes identifoed as using more that X amount of resources
 	
-    	echo The processes listed 'in' the table above exceed the maximum allowed memory usage and must therefore be terminated. 
-	echo Proceed to terminate these processes with the following command, kill '<pid> [...]'
-	
-	read -p "Enter the PID number(s) of all non-essential processes from the table above, each with a space in between them: " pid
-	#read -p "Are you sure you want to terminate these processes? " ans
+    echo The process\(es\) listed 'in' the table above exceed the maximum allowed memory usage. 
+	sleep 1
+	echo Proceed to terminate the process\(es\).
+	echo "                                                                 "
+	sleep 1
+	read -p "Enter the PID number(s) of all non-essential process(es) from the table above, each with a space in between them: " pid
 fi
 
+# Confirmation from user
 
-echo Are you sure you want to terminate these processes?
+echo Are you sure you want to terminate these process\(es\)?
 
-read ans 
+read ans
 
 case $ans in 
 y | yes)
 	kill $pid
+	echo "                                                                 "
+	echo termination 'in' progress ...
+	sleep 2
+	echo "                                                                 "
+	echo "Process $pid has been terminated."
 	;;
 
 n|no)
@@ -47,8 +54,5 @@ n|no)
     echo "Invalid entry. Enter yes/(y) or no/(n)"
     ;;
 esac
-
-#ps aux | $ans
-#echo "Process $ans has been terminated."
 
 exit 0

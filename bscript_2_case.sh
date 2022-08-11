@@ -20,7 +20,7 @@ else
 	echo "$performance"
 	echo "                                                                 "
 	
-    # Ask user to terminate processes identifoed as using more that X amount of resources
+    	# Ask user to terminate processes identifoed as using more that X amount of resources
 	
     	echo The processes listed 'in' the table above exceed the maximum allowed memory usage and must therefore be terminated. 
 	echo Proceed to terminate these processes with the following command, kill '<pid> [...]'

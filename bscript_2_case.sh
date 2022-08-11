@@ -51,7 +51,8 @@ n|no)
 	echo Goodbye.
 	;;
 *)
-    echo "Invalid entry. Enter yes/(y) or no/(n)"
+    # An entry other than (yes/y) or (no/n) will break this script
+	echo "Invalid entry. Enter yes/(y) or no/(n)"
     ;;
 esac
 

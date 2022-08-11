@@ -22,7 +22,7 @@ else
 	
     # Ask user to terminate processes identifoed as using more that X amount of resources
 	
-    echo The processes listed 'in' the table above exceed the maximum allowed memory usage and must therefore be terminated. 
+    	echo The processes listed 'in' the table above exceed the maximum allowed memory usage and must therefore be terminated. 
 	echo Proceed to terminate these processes with the following command, kill '<pid> [...]'
 	
 	read -p "Enter the PID number(s) of all non-essential processes from the table above, each with a space in between them: " pid

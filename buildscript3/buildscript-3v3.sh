@@ -102,7 +102,7 @@ sleep 2
 tput bold 
 
 # Notice the use of double \n to create a new line.
-    if grep -oFf arrayfile $file 
+    if grep -oFf secheck.txt $file 
     then
 	printf "\n"
 	# need to figure out how to print output with color with printf
